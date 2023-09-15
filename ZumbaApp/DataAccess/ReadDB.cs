@@ -43,5 +43,15 @@ namespace ZumbaApp.DataAccess
             }
             return results;
         }
+
+        public static List<Class> ReadClass()
+        {
+            List<Class> results = new List<Class>();
+            string query = "SELECT * FROM Class";
+            
+
+
+            return results;
+        }
     }
 }
