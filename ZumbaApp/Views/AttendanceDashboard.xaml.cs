@@ -41,10 +41,15 @@ namespace ZumbaApp.Views
                         AddMember addMember = new AddMember();
                         contentFrame.Navigate(addMember);
                     }
-                    else if (pageTag == "Attendance")
+                    else if (pageTag == "Attendances")
                     {
                         Attendances attendance = new Attendances();
                         contentFrame.Navigate(attendance);
+                    }
+                    else if (pageTag == "EditMember")
+                    {
+                        EditMember editMember = new EditMember();
+                        contentFrame.Navigate(editMember);
                     }
                 }
             }

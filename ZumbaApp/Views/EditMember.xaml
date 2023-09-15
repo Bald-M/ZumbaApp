@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="ZumbaApp.Views.EditMember"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZumbaApp.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" 
+             d:DesignWidth="800">
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!-- Search Condition -->
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Margin="300 0 50 0" VerticalAlignment="Center">
+                <TextBox
+                    x:Name="SearchClass"
+                    materialDesign:HintAssist.Hint="Enter Name"
+                    />
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center">
+                <Button
+                    Content="Search"
+                    Click="SearchButton"
+                    />
+            </StackPanel>
+        </StackPanel>
+        
+        <!-- Result -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible">
+            <StackPanel Grid.Row="1">
+                <ListView x:Name="resultListView" Visibility="Visible">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn 
+                            Header="ID"
+                            Width="200"
+                            DisplayMemberBinding="{Binding Id}"
+                            />
+                            <GridViewColumn 
+                            Header="Name"
+                            Width="200"
+                            DisplayMemberBinding="{Binding FullName}"
+                            />
+                            <GridViewColumn 
+                            Header="Date Of Birth"
+                            Width="200"
+                            DisplayMemberBinding="{Binding DOB}"
+                            />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -49,7 +49,7 @@
                 >
                     <TreeView Style="{StaticResource MaterialDesignTreeView}" SelectedItemChanged="TreeView_SelectedItemChanged">
                         <TreeViewItem Header="Dashboard">
-                            <TreeViewItem Header="Attendance" Tag="Attendance"/>
+                            <TreeViewItem Header="Attendance" Tag="Attendances"/>
                         </TreeViewItem>
                         <TreeViewItem Header="Class">
                             <TreeViewItem Header="Add a class" />
@@ -58,7 +58,7 @@
                         </TreeViewItem>
                         <TreeViewItem Header="Member">
                             <TreeViewItem Header="Add a member" Tag="AddMember"/>
-                            <TreeViewItem Header="Edit a member" />
+                            <TreeViewItem Header="Edit a member" Tag="EditMember" />
                         </TreeViewItem>
                     </TreeView>
                 </StackPanel>
