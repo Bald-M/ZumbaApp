@@ -28,6 +28,7 @@ namespace ZumbaApp.Views
             InitializeComponent();
 
             Member member1 = new Member(1, "John Doe", "2000-01-01");
+            
             Member member2 = new Member(2, "John Green", "2000-01-02");
             Member member3 = new Member(3, "John Smith", "2000-01-03");
 

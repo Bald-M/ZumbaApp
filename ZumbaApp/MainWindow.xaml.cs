@@ -58,6 +58,7 @@ namespace ZumbaApp
             else
             {
                 MessageBox.Show("Your username or password is incorrect");
+                Tests.App.InstanceMembersObj();
             }
             
         }

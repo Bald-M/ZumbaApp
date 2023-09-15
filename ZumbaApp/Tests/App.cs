@@ -17,7 +17,7 @@ namespace ZumbaApp.Tests
         public App() 
         {
             userCredentials = ReadDB.ReadUserCredentials();
-            Console.WriteLine(userCredentials);
+            members = ReadDB.ReadMember();
         }
 
         // Validation
@@ -45,7 +45,11 @@ namespace ZumbaApp.Tests
         {
             for (int i = 0; i < members.Count; i++)
             {
+<<<<<<< HEAD
+                Console.WriteLine(members[i]);
+=======
                 Console.WriteLine(members[i].FullName);
+>>>>>>> 628e97e93f20a80dfc373007e856198abed9ca8c
             }
         }
     }
