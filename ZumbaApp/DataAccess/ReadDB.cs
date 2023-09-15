@@ -27,6 +27,9 @@ namespace ZumbaApp.DataAccess
             return results;
         }
 
-        
+        public static List<Member> ReadMember()
+        {
+
+        }
     }
 }
