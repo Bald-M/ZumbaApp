@@ -54,6 +54,19 @@ namespace ZumbaApp.DataAccess
             return BAD_STRING;
         }
 
+        public static bool GetBool(object o)
+        {
+            if (o == null) return false;
+            bool result;
+
+            if (bool.TryParse(o.ToString(), out result))
+            {
+                return result;
+            }
+
+            return false; 
+        }
+
         public static OdbcConnection DBConnection()
         {
             string? dbStr = ConfigurationManager.AppSettings.Get("odbcString");

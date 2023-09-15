@@ -29,5 +29,14 @@ namespace ZumbaApp.Models
             this.Member = member;
             this.Class = classIns;
         }
+
+        public Attendance(int id, int memberid, int classid, string date, bool attended)
+        {
+            this.Id = id;
+            this.MemberID = memberid;
+            this.ClassID = classid;
+            this.Date = date;
+            this.Attended = attended;
+        }
     }
 }

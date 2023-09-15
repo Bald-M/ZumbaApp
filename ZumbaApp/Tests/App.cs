@@ -13,11 +13,14 @@ namespace ZumbaApp.Tests
     {
         public static List<UserCredentials> userCredentials = new List<UserCredentials>();
         public static List<Member> members = new List<Member>();
-
+        public static List<Class> classes = new List<Class>();
+        public static List<Attendance> attendances = new List<Attendance>();
         public App() 
         {
             userCredentials = ReadDB.ReadUserCredentials();
             members = ReadDB.ReadMember();
+            classes = ReadDB.ReadClass();
+            attendances = ReadDB.ReadAttendance();
         }
 
         // Validation
@@ -43,13 +46,9 @@ namespace ZumbaApp.Tests
         // Instancing all member
         public static void InstanceMembersObj()
         {
-            for (int i = 0; i < members.Count; i++)
+            for (int i = 0; i < attendances.Count; i++)
             {
-<<<<<<< HEAD
-                Console.WriteLine(members[i]);
-=======
-                Console.WriteLine(members[i].FullName);
->>>>>>> 628e97e93f20a80dfc373007e856198abed9ca8c
+                Console.WriteLine($"{attendances[i].Id} {attendances[i].MemberID} {attendances[i].ClassID} {attendances[i].Date} {attendances[i].Attended}");
             }
         }
     }
