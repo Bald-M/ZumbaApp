@@ -39,5 +39,14 @@ namespace ZumbaApp.Tests
             
             return false;
         }
+
+        // Instancing all member
+        public static void InstanceMembersObj()
+        {
+            for (int i = 0; i < members.Count; i++)
+            {
+                Console.WriteLine(members[i].FullName);
+            }
+        }
     }
 }
