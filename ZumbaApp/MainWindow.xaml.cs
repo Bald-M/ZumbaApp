@@ -44,30 +44,25 @@ namespace ZumbaApp
             string username = Username.Text;
             string password = Passwd.Password;
 
-            // Go to attendance dashboard page
-            AttendanceDashboard attendanceDashboard = new AttendanceDashboard();
-            attendanceDashboard.Show();
-            // Close the current page
-            Window window = GetWindow(this);
-            window.Close();
+            
 
 
             // Validation
-            //if (Tests.App.ValidateCredentials(username,password) == true)
-            //{
-            //    // Go to attendance dashboard page
-            //    AttendanceDashboard attendanceDashboard = new AttendanceDashboard();
-            //    attendanceDashboard.Show();
-            //    // Close the current page
-            //    Window window = GetWindow(this);
-            //    window.Close();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Your username or password is incorrect");
-            //    //Tests.App.InstanceMembersObj();
-            //}
-            
+            if (Tests.App.ValidateCredentials(username, password) == true)
+            {
+                // Go to attendance dashboard page
+                AttendanceDashboard attendanceDashboard = new AttendanceDashboard();
+                attendanceDashboard.Show();
+                // Close the current page
+                Window window = GetWindow(this);
+                window.Close();
+            }
+            else
+            {
+                MessageBox.Show("Your username or password is incorrect");
+                //Tests.App.InstanceMembersObj();
+            }
+
         }
     }
 }

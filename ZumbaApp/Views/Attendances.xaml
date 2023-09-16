@@ -15,20 +15,20 @@
         </Grid.RowDefinitions>
 
         <!--Search Bar-->
-        <StackPanel Orientation="Horizontal" Background="LightGray" Grid.Row="0">
+        <StackPanel Orientation="Horizontal" Background="{DynamicResource MaterialDesignBackground}" Grid.Row="0">
             <StackPanel Orientation="Horizontal" Margin="50 0 50 0">
                 <ComboBox 
-                    Width="100"
+                    Width="150"
                     Height="50"
                     materialDesign:HintAssist.Hint="Year"
                     IsEditable="True"
-                    Style="{StaticResource MaterialDesignFilledComboBox}"
+                    Style="{DynamicResource MaterialDesignFilledComboBox}"
                     >
                 </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0 0 50 0">
                 <ComboBox 
-                    Width="100"
+                    Width="150"
                     Height="50"
                     materialDesign:HintAssist.Hint="Month"
                     IsEditable="True"
@@ -56,7 +56,30 @@
         <!-- Result -->
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible">
             <StackPanel Grid.Row="1">
-                <ListView x:Name="resultListView" Visibility="Visible">
+                <DataGrid Name="resultListView" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Width="80" Binding="{Binding Member.Id}" IsReadOnly="True" />
+                        <DataGridTextColumn Header="Name" Width="150" Binding="{Binding Member.FullName}" IsReadOnly="True" />
+                        <DataGridTextColumn Header="Date" Width="100" Binding="{Binding Date}" IsReadOnly="True" />
+                        <DataGridTextColumn Header="ClassID" Width="110" Binding="{Binding Class.Id}" IsReadOnly="True" />
+                        <DataGridTemplateColumn Header="Attended" Width="120">
+                            <!--静态显示数据，数据库并未修改-->
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ComboBox IsReadOnly="True" SelectedItem="{Binding Attended}">
+                                        <ComboBoxItem Content="Present" />
+                                        <ComboBoxItem Content="Absent" />
+                                    </ComboBox>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                    </DataGrid.Columns>
+                </DataGrid>
+
+
+
+                <!--<ListView x:Name="resultListView" Visibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn 
@@ -86,7 +109,7 @@
                             />
                         </GridView>
                     </ListView.View>
-                </ListView>
+                </ListView>-->
             </StackPanel>
         </ScrollViewer>
     </Grid>
