@@ -53,8 +53,13 @@
 
             <!--Image-->
             <StackPanel Grid.Column="0">
-                <Image 
+                <!--<Image 
                 Source="pack://application:,,,/Resources/Images/Login.png"
+                Width="auto"
+                Height="auto"
+                />-->
+                <Image 
+                Source="D:\Projects\C#\practice\ZumbaApp\ZumbaApp\ZumbaApp\Resources\Images\Login.png"
                 Width="auto"
                 Height="auto"
                 />
