@@ -34,7 +34,7 @@ namespace ZumbaApp.Views
         {
             string searchText = SearchClass.Text.ToLower();
             // Search condition: Member name
-            // 需要实现名字模糊查询
+            // Need to implement fuzzy name search
             List<Member> searchResults = members.Where(s => s.FullName.ToString() == searchText).ToList();
             resultListView.ItemsSource = searchResults;
             resultListView.Visibility = Visibility.Visible;
