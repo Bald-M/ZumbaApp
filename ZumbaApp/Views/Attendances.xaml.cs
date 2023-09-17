@@ -43,8 +43,7 @@ namespace ZumbaApp.Views
         {
             
             string searchText = searchClass.Text.ToLower();
-            // Search condition: Class ID
-            //List<Models.Attendance> searchResults = attendances.Where(s => s.Member.DOB.ToLower().Contains(searchText)).ToList();
+            // Search: Class ID
             List<Attendance> searchResults = attendances.Where(s => s.Class.Id.ToString() == searchText).ToList();
             resultListView.ItemsSource = searchResults;
             resultListView.Visibility = Visibility.Visible;

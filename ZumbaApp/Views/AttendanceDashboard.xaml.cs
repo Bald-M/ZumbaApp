@@ -34,7 +34,7 @@ namespace ZumbaApp.Views
                 {
                     Console.WriteLine("Selected Page Tag: " + pageTag);
 
-                    // 构造 URI
+                    
                     string pageUri = $"Zumba.Views.{pageTag}";
 
                     if (pageTag == "AddMember")
