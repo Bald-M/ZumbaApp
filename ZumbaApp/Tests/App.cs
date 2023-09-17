@@ -30,7 +30,7 @@ namespace ZumbaApp.Tests
             {
                 if (credential.UserName == inputUsername && credential.Password == inputPassword)
                 {
-                    // 验证成功，返回true
+
                     return true;
                 } else
                 {
@@ -38,8 +38,8 @@ namespace ZumbaApp.Tests
                 }
             }
 
-            // 验证失败，返回false
             
+   
             return false;
         }
 
