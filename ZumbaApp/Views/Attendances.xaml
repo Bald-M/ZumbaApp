@@ -62,22 +62,24 @@
                         <DataGridTextColumn Header="Name" Width="150" Binding="{Binding Member.FullName}" IsReadOnly="True" />
                         <DataGridTextColumn Header="Date" Width="100" Binding="{Binding Date}" IsReadOnly="True" />
                         <DataGridTextColumn Header="ClassID" Width="110" Binding="{Binding Class.Id}" IsReadOnly="True" />
-                        <DataGridTemplateColumn Header="Attended" Width="120">
+                        <DataGridTemplateColumn Header="Attended" Width="200">
                             <!--静态显示数据，数据库并未修改-->
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <ComboBox IsReadOnly="True" SelectedItem="{Binding Attended}">
+                                    <!--<ComboBox IsReadOnly="True" SelectedItem="{Binding Attended}">
                                         <ComboBoxItem Content="Present" />
                                         <ComboBoxItem Content="Absent" />
-                                    </ComboBox>
+                                    </ComboBox>-->
+                                    <StackPanel Orientation="Horizontal">
+                                        <CheckBox Content="Present" IsChecked="False" IsEnabled="True" />
+                                        <CheckBox Content="Absent" IsChecked="False" IsEnabled="True" />
+                                    </StackPanel>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
                     </DataGrid.Columns>
                 </DataGrid>
-
-
 
                 <!--<ListView x:Name="resultListView" Visibility="Visible">
                     <ListView.View>

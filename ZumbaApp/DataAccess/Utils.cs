@@ -71,7 +71,6 @@ namespace ZumbaApp.DataAccess
         {
             string? dbStr = ConfigurationManager.AppSettings.Get("odbcString");
             string dbPath = "../../../Zumba.accdb";
-            //string dbPath = "D:\\Projects\\C#\\practice\\ZumbaApp\\ZumbaApp\\ZumbaApp\\Zumba.accdb";
             string connectionString = dbStr + dbPath;
             try
             {
