@@ -34,7 +34,6 @@ namespace ZumbaApp.Views
             {
                 attendances.Add(new Attendance(i, attendanceClass[i].MemberID, attendanceClass[i].ClassID, attendanceClass[i].Date, attendanceClass[i].Attended, Tests.App.members[attendanceClass[i].MemberID - 1], Tests.App.classes[attendanceClass[i].ClassID - 1]));
                 //Console.WriteLine($"{attendanceClass[i].MemberID} {attendanceClass[i].ClassID}");
-                string CCC = "Mon";
             }
             resultListView.ItemsSource = attendances;
         }
