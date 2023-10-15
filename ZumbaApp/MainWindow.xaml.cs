@@ -44,9 +44,6 @@ namespace ZumbaApp
             string username = Username.Text;
             string password = Passwd.Password;
 
-            
-
-
             // Validation
             if (Tests.App.ValidateCredentials(username, password) == true)
             {

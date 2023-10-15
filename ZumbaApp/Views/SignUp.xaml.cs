@@ -34,11 +34,14 @@ namespace ZumbaApp.Views
             MessageBox.Show("Your account is created successfully!");
 
             // Redirect to sign in page
-            MainWindow signIn = new MainWindow();
-            signIn.Show();
+            //MainWindow signIn = new MainWindow();
+            //signIn.Show();
+
+            
             // Close the current page
             Window currentWindow = GetWindow(this);
             this.Close();
+
         }
     }
 }

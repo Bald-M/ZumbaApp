@@ -63,13 +63,8 @@
                         <DataGridTextColumn Header="Date" Width="100" Binding="{Binding Date}" IsReadOnly="True" />
                         <DataGridTextColumn Header="ClassID" Width="110" Binding="{Binding Class.Id}" IsReadOnly="True" />
                         <DataGridTemplateColumn Header="Attended" Width="200">
-                            <!--静态显示数据，数据库并未修改-->
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <!--<ComboBox IsReadOnly="True" SelectedItem="{Binding Attended}">
-                                        <ComboBoxItem Content="Present" />
-                                        <ComboBoxItem Content="Absent" />
-                                    </ComboBox>-->
                                     <StackPanel Orientation="Horizontal">
                                         <CheckBox Content="Present" IsChecked="False" IsEnabled="True" />
                                         <CheckBox Content="Absent" IsChecked="False" IsEnabled="True" />

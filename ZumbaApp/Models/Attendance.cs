@@ -13,6 +13,7 @@ namespace ZumbaApp.Models
         public int ClassID { get; set; }
         public string Date { get; set; }
         public bool Attended { get; set; }
+        
 
         // Assoicate with Member class
         public Member Member { get; set; }

@@ -78,7 +78,7 @@ namespace ZumbaApp.DataAccess
                 connection.Open();
                 return connection;
             }
-            catch (OdbcException e)
+            catch (Exception e)
             {
                 Console.WriteLine("Connection Failure.Error message below:");
                 Console.WriteLine(e.Message);

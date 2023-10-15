@@ -48,7 +48,7 @@
             <!--Image-->
             <StackPanel Grid.Column="0">
                 <Image 
-                Source="pack://application:,,,/Resources/Images/Login.png"
+                Source="D:\Projects\C#\practice\ZumbaApp\ZumbaApp\ZumbaApp\Resources\Images\Login.png"
                 Width="auto"
                 Height="auto"
                 />
@@ -58,7 +58,7 @@
                 <!--User Login-->
                 <StackPanel Margin="0 20 0 35">
                     <TextBlock 
-                        Text="User Login"
+                        Text="User Sign Up"
                         TextAlignment="Center"
                         Foreground="#808080"
                         FontWeight="Bold"
